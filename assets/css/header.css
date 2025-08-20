@@ -1,13 +1,11 @@
+@import url(colors.scss);
+@import url(fonts.scss);
 @font-face {
   font-family: 'Bebas Neue';
   src: url("./../fonts/Bebas_Neue/BebasNeue-Regular.woff2") format("woff2"), url("./../fonts/Bebas_Neue/BebasNeue-Regular.woff") format("woff"), url("./../fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
-
-.bebas-neue {
-  font-family: 'Bebas Neue', sans-serif;
 }
 
 @font-face {
@@ -32,10 +30,6 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
-
-.amiko {
-  font-family: 'Amiko', sans-serif !important;
 }
 
 @font-face {
@@ -70,10 +64,6 @@
   font-display: swap;
 }
 
-.poppins {
-  font-family: "Poppins", sans-serif;
-}
-
 @font-face {
   font-family: 'Roboto';
   src: url("./../fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("./../fonts/Roboto/Roboto-Bold.woff") format("woff"), url("./../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
@@ -104,6 +94,17 @@
   font-weight: 900;
   font-style: normal;
   font-display: swap;
+}
+.bebas-neue {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.amiko {
+  font-family: "Amiko", sans-serif !important;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
 }
 
 .roboto {
@@ -239,7 +240,7 @@ body .text-yellow {
 
 body .title-bg {
   color: white;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
   font-size: 50px;
   letter-spacing: 2px;
@@ -284,15 +285,6 @@ body .title-separator:after {
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-  body .title-bg {
-    font-size: 30px;
-    margin-bottom: 30px;
-    background-size: 100%;
-    padding: 15px 0;
-  }
-}
-
 .site-content {
   padding-top: 150px;
 }
@@ -324,7 +316,11 @@ header .header-top a .icon {
   width: 26px;
 }
 
-header .header-top a:hover, header .header-top a:focus {
+header .header-top a:hover {
+  color: #e63467;
+}
+
+header .header-top a:focus {
   color: #e63467;
 }
 
@@ -338,7 +334,7 @@ header .offcanvas .navbar-nav .nav-item .nav-link {
   color: #fff;
   font-weight: 400;
   padding: 5px 0;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   -webkit-transition: .2s;
   transition: .2s;
   letter-spacing: 1px;
@@ -360,7 +356,7 @@ header .offcanvas .navbar-nav .nav-item.dropdown .dropdown-menu {
 }
 
 header .offcanvas .navbar-nav .nav-item.dropdown .dropdown-menu .nav-item .nav-link {
-  font-family: 'Amiko', sans-serif;
+  font-family: "Amiko", sans-serif;
   font-size: 12px;
 }
 
@@ -388,7 +384,7 @@ header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
   color: #fff;
   font-weight: 400;
   padding: 5px 20px;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -399,7 +395,7 @@ header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:h
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown > .nav-link::after {
   content: "\f107";
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   border: none;
   height: unset;
   width: unset;
@@ -407,10 +403,6 @@ header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown > 
   float: right;
   line-height: 40px;
   margin-left: 10px;
-}
-
-header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.current_page_item .nav-link {
-  color: #e63467;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
@@ -431,7 +423,7 @@ header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown .d
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  transition-delay: 1s;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown .dropdown-menu .nav-link {
@@ -440,22 +432,30 @@ header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown .d
   background-color: transparent;
   font-size: 14px;
   padding: 8px 20px;
-  font-family: 'Amiko', sans-serif;
+  font-family: "Amiko", sans-serif;
   font-weight: 600;
 }
 
-header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown .dropdown-menu .nav-link:hover, header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown .dropdown-menu .nav-link:focus {
+header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown .dropdown-menu .nav-link:hover {
   color: #0283c5;
+}
+
+header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown .dropdown-menu .nav-link:focus {
+  color: #0283c5;
+}
+
+header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.current_page_item .nav-link {
+  color: #e63467;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2column .dropdown-menu {
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   min-width: 630px;
   border-radius: 20px;
   padding: 20px;
   -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2column .dropdown-menu li {
@@ -473,42 +473,42 @@ header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2c
   left: 0;
   top: 50%;
   -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  transform: translate(0, -50%);
   background: url("./../img/dropdown-icons/logo-desing-icon.svg") no-repeat center/cover;
   width: 20px;
   height: 20px;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2column .dropdown-menu li.nav-item.icon1 .nav-link:after {
-  background: url("./../img/dropdown-icons/logo-desing-icon.svg") no-repeat center/cover;
+  background: url("./../img/icons/sub-menu/logo-desing-icon.webp") no-repeat center/cover;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2column .dropdown-menu li.nav-item.icon2 .nav-link:after {
-  background: url("./../img/dropdown-icons/branding.svg") no-repeat center/cover;
+  background: url("./../img/icons/sub-menu/branding.webp") no-repeat center/cover;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2column .dropdown-menu li.nav-item.icon3 .nav-link:after {
-  background: url("./../img/dropdown-icons/web-design-logo.svg") no-repeat center/cover;
+  background: url("./../img/icons/sub-menu/web-design-logo.webp") no-repeat center/cover;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2column .dropdown-menu li.nav-item.icon4 .nav-link:after {
-  background: url("./../img/dropdown-icons/seo.svg") no-repeat center/cover;
+  background: url("./../img/icons/sub-menu/seo.webp") no-repeat center/cover;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2column .dropdown-menu li.nav-item.icon5 .nav-link:after {
-  background: url("./../img/dropdown-icons/social-media.svg") no-repeat center/cover;
+  background: url("./../img/icons/sub-menu/social-media.webp") no-repeat center/cover;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2column .dropdown-menu li.nav-item.icon6 .nav-link:after {
-  background: url("./../img/dropdown-icons/web-design-logo.svg") no-repeat center/cover;
+  background: url("./../img/icons/sub-menu/web-design-logo.webp") no-repeat center/cover;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2column .dropdown-menu li.nav-item.icon7 .nav-link:after {
-  background: url("./../img/dropdown-icons/app-development.svg") no-repeat center/cover;
+  background: url("./../img/icons/sub-menu/app-development.webp") no-repeat center/cover;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2column .dropdown-menu li.nav-item.icon8 .nav-link:after {
-  background: url("./../img/dropdown-icons/t-shirt-design.svg") no-repeat center/cover;
+  background: url("./../img/icons/sub-menu/t-shirt-design.webp") no-repeat center/cover;
 }
 
 header .header-bottom .navbar .navbar-collapse .navbar-nav .nav-item.dropdown-2column:hover .dropdown-menu {
@@ -536,7 +536,7 @@ header .header-bottom .navbar .navbar-toggler {
   border: none;
   height: 40px;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 header .header-bottom .navbar .navbar-toggler .bars {
@@ -553,6 +553,15 @@ header .header-bottom .navbar .navbar-toggler.collapsed .bars {
 
 header .header-bottom .navbar .navbar-toggler.collapsed .times {
   display: none;
+}
+
+@media (max-width: 768px) {
+  body .title-bg {
+    font-size: 30px;
+    margin-bottom: 30px;
+    background-size: 100%;
+    padding: 15px 0;
+  }
 }
 
 @media (max-width: 992px) {
@@ -600,8 +609,8 @@ header .header-bottom .navbar .navbar-toggler.collapsed .times {
   }
   header .header-bottom .container .navbar .header-mobile {
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 15px 30px;
     width: 100%;
   }
@@ -623,7 +632,7 @@ header .header-bottom .navbar .navbar-toggler.collapsed .times {
   }
   header .header-bottom .container .navbar .navbar-collapse .slide-menu .navbar-nav .nav-item .nav-link {
     color: #fff;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 18px;
     font-weight: 300;
     text-transform: capitalize;
